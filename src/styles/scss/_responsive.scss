@@ -1,0 +1,23 @@
+@include media-xl {
+    .container {
+        max-width: 70%;
+    }
+}
+  
+@include media-l {
+    .container {
+        max-width: 80%;
+    }
+}
+  
+@include media-m {
+    .container {
+        max-width: 90%;
+    }
+}
+  
+@include media-s {
+    .container {
+        max-width: 100%;
+    }
+}

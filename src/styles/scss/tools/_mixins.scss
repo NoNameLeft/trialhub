@@ -1,0 +1,32 @@
+@import '../settings/variables';
+
+/*
+    ********************
+    MIXINS
+    ********************
+*/
+
+// xl => l => m => s (based on general clothing sizes)
+@mixin media-xl {
+    @media screen and (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin media-l {
+    @media screen and (max-width: $breakpoint-laptop) {
+        @content;
+    }
+}
+
+@mixin media-m {
+    @media screen and (max-width: $breakpoint-tablet)  {
+        @content;
+    }
+}
+
+@mixin media-s {
+    @media screen and (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}

@@ -6,14 +6,21 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-sass": "node-sass -r --output-style compressed src/index.scss -o src/styles/css",
+    "watch-sass": "npm run build-sass && npm run build-sass -- -w",
+    "start-react": "react-scripts start",
+    "start": "npm-run-all -p watch-sass start-react",
+    "build-react": "react-scripts build",
+    "build": "npm-run-all build-sass build-react",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

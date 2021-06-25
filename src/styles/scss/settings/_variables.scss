@@ -1,0 +1,25 @@
+/*
+    ********************
+    COLOR VARIABLES
+    ********************
+*/
+
+// * ==> colors names are relative
+$cyan: #1D8FBC; //Cyan Cornflower Blue* used for the message box
+$oxford: #334d6e; //Oxford Blue* used for the alert strip
+$cerulean: #006BA0; //Cerulean Blue* used as background color for the landing page
+$darkCerulean: #004b75; //Dark Cerulean Blue* used as background color for the footer
+$orange: #FF862F; //Princeton Orange* used for buttons and links
+$white: #FFFFFF; //Used for the texts
+
+/* 
+    ********************
+    BREAKOPOINTS
+    ******************** 
+*/
+
+// @media (max-width: $breakpoint-tablet) { }
+$breakpoint-desktop: 1200px;
+$breakpoint-laptop: 950px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 400px;

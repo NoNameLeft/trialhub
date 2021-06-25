@@ -1,0 +1,14 @@
+// Settings
+@import './styles/scss/settings/variables';
+@import './styles/scss/settings/config';
+
+// Tools
+@import './styles/scss/tools/mixins';
+
+// Components
+@import './components/Home/home';
+@import './components/Header/header';
+@import './components/Footer/footer';
+
+// Others
+@import './styles/scss/responsive';
