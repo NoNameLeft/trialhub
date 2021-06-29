@@ -1,23 +1,99 @@
 @include media-xl {
-    .container {
-        max-width: 70%;
+    .home,
+    .navbar,
+    .footer__wrapper {
+        width: 90%;
     }
 }
-  
-@include media-l {
-    .container {
-        max-width: 80%;
-    }
-}
-  
+
 @include media-m {
-    .container {
-        max-width: 90%;
+    .home {
+        &__info {
+            flex-direction: column;
+
+            &__text {
+                padding: 0;
+                &__title {
+                    text-align: left;
+                    margin-top: 0;
+                    padding: 0;
+                    font-size: 2.3125rem;
+                    line-height: 3.5rem;
+                    font-weight: 600;
+                    max-width: 18.75rem;
+                }
+            }
+
+            &__banner {
+                img {
+                    max-width: 80%;
+                }
+            }
+        }
+
+        &__email {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding-top: 1.875rem;
+            width: 90%;
+
+            &__input {
+                width: 100%;
+                border-radius: 0.5em;
+            }
+
+            &__btn {
+                width: 100%;
+                padding: 0.875rem;
+                margin-top: 1.25rem;
+                border-radius: 0.5em;
+            }
+        }
+    }
+
+    .footer {
+        &__motto {
+            width: 80%;
+        }
     }
 }
   
 @include media-s {
-    .container {
-        max-width: 100%;
+    .navbar {
+        flex-direction: column;
+        
+        &__menu {
+            &__btns {
+                a {
+                    display: none;
+                }
+            }
+    
+            &__bars {
+                display: block;
+                font-size: 1.5rem;
+                color: $textColor;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .home {
+        &__info {
+            &__banner {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__motto {
+            width: 90%;
+            padding: 1rem;
+            border-radius: 0.9em;
+        }
     }
 }

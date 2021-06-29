@@ -1,3 +1,27 @@
 .footer {
-    min-height:50px; 
+    
+    &__strip {
+        width: 100%;
+        padding: 0.625rem;
+        background-color: $cyan;
+        align-self: flex-end;
+    }
+
+    &__motto {
+        width: 48%;
+        position: relative;
+        padding: 2.5rem;
+        text-align: center;
+        border: 0.1875em solid $lightblue;
+        border-radius: 0.5em;
+        background-color: $cyan;
+        top: 1.25rem;
+
+        &__text {
+            font-size: 1.125rem;
+            font-style: italic;
+            line-height: 1.75rem;
+            color: $textColor;
+        }
+    }
 }

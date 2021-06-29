@@ -1,4 +1,51 @@
 .navbar {
-    display: grid;
-    grid-template-columns: 30% 70%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.9375rem;
+
+    &__brand {
+        cursor: pointer;
+        
+        &__logo {
+            width: 3.75rem;
+            vertical-align: middle;
+            padding: 0.625rem;
+        }
+        
+        &__name {
+            vertical-align: middle;
+            color: $textColor;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__menu {
+        &__btns {
+            padding: 0.4375rem;
+    
+            a {
+                float: right;
+                text-decoration: none;
+                color: $textColor;
+                padding: 1em 1em;
+                opacity: 0.8;
+                font-size: 1.1rem;
+            }
+    
+            a:hover {
+                opacity: 1;
+                font-weight: bolder;
+            }
+        }
+
+        &__bars {
+            display: none;
+            position: absolute;
+            right: 1.5rem;
+            top: 2.3rem;
+        }
+    }
 }

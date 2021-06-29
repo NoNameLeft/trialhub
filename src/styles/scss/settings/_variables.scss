@@ -10,7 +10,8 @@ $oxford: #334d6e; //Oxford Blue* used for the alert strip
 $cerulean: #006BA0; //Cerulean Blue* used as background color for the landing page
 $darkCerulean: #004b75; //Dark Cerulean Blue* used as background color for the footer
 $orange: #FF862F; //Princeton Orange* used for buttons and links
-$white: #FFFFFF; //Used for the texts
+$textColor: #FFFFFF; //Used for the texts
+$lightblue: #69a6ee; //Used for border color
 
 /* 
     ********************
@@ -19,7 +20,7 @@ $white: #FFFFFF; //Used for the texts
 */
 
 // @media (max-width: $breakpoint-tablet) { }
-$breakpoint-desktop: 1200px;
-$breakpoint-laptop: 950px;
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 400px;
+$breakpoint-desktop: 75em;
+$breakpoint-laptop: 61.875em;
+$breakpoint-tablet: 49.5em;
+$breakpoint-mobile: 28.25em;
