@@ -6,6 +6,8 @@ import { ToastContainer, Zoom } from 'react-toastify';
 import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Error from './components/Error';
+import ErrorBondary from './components/ErrorBoundary/ErrorBoundary';
 
 class App extends Component  {
   render() {
@@ -15,9 +17,12 @@ class App extends Component  {
           <ToastContainer draggable={false} transition={Zoom} autoClose={3000} position={'top-center'} />
         </>
         <Header/>
-        <Switch>
-          <Route path="/" exact component={Home} />
-        </Switch>
+        <ErrorBondary>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="*" component={Error} />
+          </Switch>
+        </ErrorBondary>
         <Footer/>
       </div>
     );
