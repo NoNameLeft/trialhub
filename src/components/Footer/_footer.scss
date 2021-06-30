@@ -23,5 +23,23 @@
             line-height: 1.75rem;
             color: $textColor;
         }
+
+        &__rightq,
+        &__leftq {
+            position: absolute;
+            color: $textColor;
+            font-size: 1.25rem;
+            
+        }
+
+        &__leftq {
+            top: 1.25rem;
+            left: 1.25rem;
+        }
+
+        &__rightq {
+            bottom: 1.25rem;
+            right: 1.25rem;
+        }
     }
 }

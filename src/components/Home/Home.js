@@ -1,14 +1,24 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { toast } from 'react-toastify';
+
 import Card from '../Card';
 import * as jokesService from '../../service/jokesService';
+import * as regex from '../../shared/Regex';
 
 const Home = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [email, setEmail] = useState('')
     const [joke, setJoke] = useState('');
 
     const jokeBtnHandler = () => {
+        if(!regex.validEmail.test(email)) {
+            return toast.error('Enter a valid Business Email to continue.');
+        }
+        
+        setEmail('');
         setIsOpen(true);
         jokesService.getJoke()
             .then(res => {
@@ -28,7 +38,7 @@ const Home = () => {
                         <h1 className="home__info__text__title">Clinical Trial Strategy That Stands Out</h1>
                         <h1 className="home__info__text__subtitle">Why losing studies you can win with TrialHub</h1>
                         <div className="home__email">
-                            <input type="text" className="home__email__input" placeholder="Your work email" />
+                            <input type="text" className="home__email__input" placeholder="Your work email" required={true} value={email} onChange={e => setEmail(e.target.value)} />
                             <button type="button" className="home__email__btn" onClick={jokeBtnHandler} >See TrialHub in Action</button>
                             <Card open={isOpen} onClose={() => setIsOpen(false)}>
                                 <span style={{color: "black"}}>{joke}</span>
